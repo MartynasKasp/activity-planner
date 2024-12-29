@@ -1,0 +1,10 @@
+services:
+  app:
+    container_name: planner-app
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./:/app:rw,cached
+    ports:
+      - "3001:3000"
