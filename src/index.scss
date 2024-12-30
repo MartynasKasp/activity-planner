@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body,
+#root, #root > div {
+  height: 100vh;
+}
+
+.App__Container {
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.Layout__Container {
+  padding: 32px 16px 96px 16px;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

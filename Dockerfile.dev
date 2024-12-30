@@ -1,7 +1,7 @@
 FROM node:23.5.0-alpine
 
 RUN apk update && \
-    apk add \
+    apk add bash \
         git
 
 COPY . ./app
