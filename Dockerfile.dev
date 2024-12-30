@@ -2,7 +2,8 @@ FROM node:23.5.0-alpine
 
 RUN apk update && \
     apk add bash \
-        git
+        git \
+        openssh
 
 COPY . ./app
 
