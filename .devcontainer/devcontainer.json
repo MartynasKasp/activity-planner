@@ -7,6 +7,12 @@
 	],
 	"service": "app",
 	"workspaceFolder": "/app",
-	"shutdownAction": "none"
-	// "customizations": {},
+	"shutdownAction": "none",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "bash"
+			}
+		}
+	}
 }

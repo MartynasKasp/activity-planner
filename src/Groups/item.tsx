@@ -1,5 +1,9 @@
 import { Tab, Tabs } from '@nextui-org/react';
 import React from 'react';
+import GroupInfo from './Info';
+import GroupMembers from './Members';
+import GroupInfoSkeleton from './Info/skeleton';
+import GroupMembersSkeleton from './Members/skeleton';
 
 function GroupItem() {
     return (
@@ -13,22 +17,24 @@ function GroupItem() {
                 <Tabs
                     fullWidth
                     color='secondary'
-                    variant='bordered'
+                    // variant='bordered'
                 >
                     <Tab key='info' title='Info'>
+                        <div className='GroupItem__InfoContainer'>
+                            <GroupInfo />
+                            {/* <GroupInfoSkeleton /> */}
+                            <GroupMembers />
+                            {/* <GroupMembersSkeleton /> */}
+                        </div>
+                    </Tab>
+                    <Tab key='polls' title='Polls'>
                         <p>
-                            Something goes here in the Info tab, like Group Title, and thats it? useless<br/>
-                            Planning new activity control should probably be here as well
+                            Group members with controls to remove and invite new members
                         </p>
                     </Tab>
                     <Tab key='ownedGames' title='Owned Games'>
                         <p>
                             List of owned games with controls to edit/remove and add new games
-                        </p>
-                    </Tab>
-                    <Tab key='members' title='Members'>
-                        <p>
-                            Group members with controls to remove and invite new members
                         </p>
                     </Tab>
                     {/* <Tab key='some' title='Some else'>

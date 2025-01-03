@@ -1,10 +1,22 @@
 import React from 'react';
 import './styles.scss';
-import { CalendarViewDay, CalendarViewDayOutlined, Group, GroupOutlined, WorkspacesOutlined } from '@mui/icons-material';
+import { CalendarViewDay, CalendarViewDayOutlined, Group, GroupOutlined, Home, HomeOutlined } from '@mui/icons-material';
 
 function BottomNavigation() {
     return (
         <div className='BottomNavigation__Container'>
+            <a
+                href='#'
+                className='BottomNavigation__Item'
+            >
+                <div className='BottomNavigation__ItemIcon'>
+                    <HomeOutlined />
+                    {/* <Home /> */}
+                </div>
+                <div className='BottomNavigation__ItemLabel'>
+                    Home
+                </div>
+            </a>
             <a
                 href='#'
                 className='BottomNavigation__Item BottomNavigation__Item--active'
@@ -27,17 +39,6 @@ function BottomNavigation() {
                 </div>
                 <div className='BottomNavigation__ItemLabel'>
                     Upcoming
-                </div>
-            </a>
-            <a
-                href='#'
-                className='BottomNavigation__Item'
-            >
-                <div className='BottomNavigation__ItemIcon'>
-                    <WorkspacesOutlined />
-                </div>
-                <div className='BottomNavigation__ItemLabel'>
-                    Placeholder
                 </div>
             </a>
         </div>
